@@ -1,0 +1,12 @@
+/*
+    For styles related to lists in the app
+*/
+
+.listLink {
+    color: inherit; /* Inherit the color from the parent element */
+    text-decoration: none; /* Remove underline */
+
+}
+.listLink:hover {
+    text-decoration: underline;
+}
