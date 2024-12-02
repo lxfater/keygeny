@@ -1,0 +1,13 @@
+{
+  "buildCommand": "cd app && yarn install && yarn build",
+  "devCommand": "cd app && yarn dev",
+  "installCommand": "cd app && yarn install",
+  "framework": "vite",
+  "outputDirectory": "app/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
