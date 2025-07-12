@@ -92,7 +92,15 @@ export const keygenshDataProvider: DataProvider = {
             }
         })
 
-        return data
+        // Extract total count from response metadata
+        // Keygen API typically returns count in links.meta.count
+        const total = data.links?.meta?.count || data.meta?.count || data.data?.length || 0;
+
+        // Return in the format expected by Refine
+        return {
+            data: data.data || [],
+            total: total
+        }
     },
     create: async ({ resource, variables }) => {
         const apiUrl = appState.getState().apiUrl

@@ -14,7 +14,7 @@ import {
   Group,
   ScrollArea,
   Table,
-  Pagination, Loader, CheckIcon,
+  Pagination, Loader,
 } from "@mantine/core";
 
 import {ColumnFilter, ColumnSorter} from "../../components";
