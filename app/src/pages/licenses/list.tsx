@@ -7,6 +7,7 @@ import {
   EditButton,
   DeleteButton,
   DateField, BooleanField,
+  CreateButton,
 } from "@refinedev/mantine";
 
 import {
@@ -497,15 +498,18 @@ export const LicenseList: React.FC = () => {
     <ScrollArea>
       <List
         headerButtons={
-          <Button
-            onClick={handleExportExcel}
-            leftIcon={<IconDownload size={16} />}
-            variant="outline"
-            loading={isExporting}
-            disabled={isExporting}
-          >
-            {isExporting ? 'Exporting...' : 'Export All to Excel'}
-          </Button>
+          <Group spacing="xs">
+            <CreateButton />
+            <Button
+              onClick={handleExportExcel}
+              leftIcon={<IconDownload size={16} />}
+              variant="outline"
+              loading={isExporting}
+              disabled={isExporting}
+            >
+              {isExporting ? 'Exporting...' : 'Export All to Excel'}
+            </Button>
+          </Group>
         }
       >
         <Table highlightOnHover>
