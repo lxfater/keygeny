@@ -293,6 +293,11 @@ export const LicenseList: React.FC = () => {
     },
   } = useTable({
     columns,
+    refineCoreProps: {
+      pagination: {
+        pageSize: 100,
+      },
+    },
   });
   // const categoryIds = tableData?.data?.map((item) => item.category.id) ?? [];
   // const { data: categoriesData } = useMany<ICategory>({
